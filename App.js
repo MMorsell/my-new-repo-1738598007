@@ -9,7 +9,14 @@ const Drawer = createDrawerNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator>
+      <Drawer.Navigator
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: '#800080', // Purple color
+          },
+          headerTintColor: '#fff', // White text color for contrast
+        }}
+      >
         <Drawer.Screen name="Hello Martin 2" component={Home} />
         <Drawer.Screen name="About" component={About} />
         <Drawer.Screen name="Contact" component={Contact} />
